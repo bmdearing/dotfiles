@@ -9,10 +9,6 @@ alias ls='ls --color=auto'
 
 alias abort='pacman -Qtdq | pacman -Rns -'
 
-alias war3save='cd /home/atrx/games/warcraft3/drive_c/users/atrx/My\ Documents/Warcraft\ III/CustomMapData'
-
-# alias pacfind='sudo pacman -Sl | awk '{print $2($4=="" ? "" : " *")}' | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S'
-
 # define functions
 pacfind(){ pacman -Sl | awk '{print $2($4=="" ? "" : " *")}' | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S; }
 yayfind(){ yay -Sl | awk '{print $2($4=="" ? "" : " *")}' | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S; }
